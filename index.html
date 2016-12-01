@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script>
+    var image = ["img/CamisetaRojaTrans.png", "img/Armor_of_Artorias.png"]
+    var incremento = 0;
+$(document).on("pagecreate","#pageone",function(){
+  $(".swipe").on("swiperight",function(){
+      if(incremento==0){
+          incremento= 0;
+          document.getElementById("swipe").src = image[incremento]
+      }else{
+      incremento=incremento-1;
+      document.getElementById("swipe").src = image[incremento];
+      }
+      
+  });
+});
+
+$(document).on("pagecreate","#pageone",function(){
+  $(".swipe").on("swipeleft",function(){
+      if(incremento==image.length-1){
+          incremento= image.length-1;
+           document.getElementById("swipe").src = image[incremento]
+      }else{
+      incremento=incremento+1;
+      document.getElementById("swipe").src = image[incremento];
+      }
+  });
+});
+    
+    function nextimg(){ 
+        incremento=incremento+1;
+        document.getElementById("swipe").src = image[incremento];
+    }
+     var image2 = ["img/pantalon%20poplin%20ch.png", "img/Leggings_of_Artorias.png"]
+    var incremento2 = 0;
+$(document).on("pagecreate","#pageone",function(){
+  $(".swipe2").on("swiperight",function(){
+      if(incremento2==0){
+          incremento2= 0;
+          document.getElementById("swipe2").src = image2[incremento2]
+      }else{
+      incremento2=incremento2-1;
+      document.getElementById("swipe2").src = image2[incremento2];
+      }
+      
+  });
+});
+
+$(document).on("pagecreate","#pageone",function(){
+  $(".swipe2").on("swipeleft",function(){
+      if(incremento2==image2.length-1){
+          incremento2= image2.length-1;
+           document.getElementById("swipe2").src = image2[incremento2]
+      }else{
+      incremento2=incremento2+1;
+      document.getElementById("swipe2").src = image2[incremento2];
+      }
+  });
+});
+    
+    function nextimg(){ 
+        incremento2=incremento2+1;
+        document.getElementById("swipe2").src = image2[incremento2];
+    }
+    var image3 = ["img/Shoes.png", "img/zapatos_hombre.png"]
+    var incremento3 = 0;
+$(document).on("pagecreate","#pageone",function(){
+  $(".swipe3").on("swiperight",function(){
+      if(incremento3==0){
+          incremento3= 0;
+          document.getElementById("swipe3").src = image3[incremento3]
+      }else{
+      incremento3=incremento3-1;
+      document.getElementById("swipe3").src = image3[incremento3];
+      }
+      
+  });
+});
+
+$(document).on("pagecreate","#pageone",function(){
+  $(".swipe3").on("swipeleft",function(){
+      if(incremento3==image3.length-1){
+          incremento3= image3.length-1;
+           document.getElementById("swipe3").src = image3[incremento3]
+      }else{
+      incremento3=incremento3+1;
+      document.getElementById("swipe3").src = image3[incremento3];
+      }
+  });
+});
+    
+    function nextimg(){ 
+        incremento3=incremento3+1;
+        document.getElementById("swipe3").src = image3[incremento3];
+    }
+</script>
+</head>
+<body>
+
+<div data-role="page" id="pageone">
+  <div data-role="header">
+    <h1>Armario</h1>
+  </div>
+    
+
+  <div data-role="main" class="ui-content">
+      <p><img class="swipe" id="swipe" src="img/CamisetaRojaTrans.png" style="width:47%;height:40%;"></p>
+  </div>
+        
+    <div data-role="main" class="ui-content">
+    <p><img class="swipe2" id="swipe2" src="img/pantalon%20poplin%20ch.png" style="width:47%;height:40%;"></p>
+    </div>
+        
+        <div data-role="main" class="ui-content">
+    <p><img class="swipe3" id="swipe3" src="img/Shoes.png" style="width:40%;height:40%;"></p>
+        </div>
+          
+
+</div>
+</body>
+</html>
+
